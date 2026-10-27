@@ -32,12 +32,13 @@
     <script>
       var canvas = document.querySelector("#unity-canvas");
       var fill = document.querySelector("#fill"), pct = document.querySelector("#pct");
-      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      var dpr = isMobile ? 1 : Math.min(window.devicePixelRatio || 1, 2);
       createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "Build/Web.data.unityweb?v=10270934",
-        frameworkUrl: "Build/Web.framework.js.unityweb?v=10270934",
-        codeUrl: "Build/Web.wasm.unityweb?v=10270934",
+        dataUrl: "Build/Web.data.unityweb?v=10270949",
+        frameworkUrl: "Build/Web.framework.js.unityweb?v=10270949",
+        codeUrl: "Build/Web.wasm.unityweb?v=10270949",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Facai",
         productName: "城墙之战",
